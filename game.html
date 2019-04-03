@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MoveIt-Game</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:400,700,800,900&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="game" class="game">
+      <div class="menu-container">
+        <div class="logo-core"></div>
+        <div class="instruction">
+          <h1 class="instruction-title">STEROWANIE:</h1>
+          <ul>
+            <li>
+              <img src="./img/esc.jpg" alt="esc" />
+              <h4>Pauza w oknie gry</h4>
+            </li>
+            <li>
+              <img src="./img/A.jpg" alt="A" />
+              <h4>Odesłanie ciężarówki nr 1</h4>
+            </li>
+            <li>
+              <img src="./img/s.jpg" alt="S" />
+              <h4>Odesłanie ciężarówki nr 2</h4>
+            </li>
+            <li>
+              <img src="./img/D.jpg" alt="D" />
+              <h4>Odesłanie ciężarówki nr 3</h4>
+            </li>
+            <li>
+              <img src="./img/leftarrow.jpg" alt="left arrow" />
+              <h4>Przesunięcie klocka w lewo</h4>
+            </li>
+            <li>
+              <img src="./img/rightarrow.jpg" alt="right arrow" />
+              <h4>Przesunięcie klocka w prawo</h4>
+            </li>
+            <li>
+              <img src="./img/downarrow.jpg" alt="down arrow" />
+              <h4>Przyspieszenie spadania klocka</h4>
+            </li>
+            <li>
+              <img src="./img/space.jpg" alt="Space" />
+              <h4>Obrót klocka</h4>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="music-button"></div>
+      <div class="score">WYNIK: 0</div>
+      <div class="game-display">
+        <div class="board-with-trucks">
+          <div id="board"></div>
+          <div class="trucks">
+            <div class="firstTruck truckPhantom"></div>
+            <div class="timer-border one hidden"><div class="first-truck-timer-position hidden"></div></div>
+            <div class="secondTruck truckPhantom"></div>
+            <div class="timer-border two hidden"><div class="second-truck-timer-position hidden"></div></div>
+            <div class="thirdTruck truckPhantom"></div>
+            <div class="timer-border three hidden"><div class="third-truck-timer-position hidden"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="hidden"> -->
+    <div class="popup-body hidden">
+      <div class="main-popup-container">
+        <img src="./img/moveitgame.png" alt="logo gry MoveIt" />
+        <h1 class="pause-game upper-case">Zatrzymanie gry</h1>
+        <p class="paragraph-about-pause">Twoja rozgrywka została wstrzymana.</p>
+        <p class="paragraph-about-pause">Wybierz jedną z poniższych opcji.</p>
+        <div class="button-box">
+          <a class="add-button upper-case" href="./index.html"
+            >koniec gry<i class="arrow right"></i
+          ></a>
+          <a class="add-button upper-case" href="./game.html"
+            >restart gry<i class="arrow right"></i
+          ></a>
+          <button class="add-button upper-case resume-game">
+            powrót do gry <i class="arrow right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <!-- <div class="hidden"> -->
+      <div class="popup-score hidden">
+        <div class="main-popup-container-end">
+          <!-- <img src="./img/logo_white.png" alt="logo gry MoveIt" /> -->
+          <h1 class="upper-case end-game">game over!</h1>
+          <h1 class="show-score end-game-2 upper-case"></h1>
+          <form class="form-score">
+            <div class="header-for-score">Dodaj swój rezultat do tablicy wyników!</div>
+            <!-- <label for="name">Podaj imię: </label> -->
+            <input class="input-button" type="text" placeholder="  Wpisz swoje imię..." name="name">
+            <input class="submit-button" type="submit" value="Wyślij">
+          </form>
+          <p class="last-scorse-header result-score"></p>
+          <p class="last-scorse-header-2">3 Najlepsze wyniki w MoveIt Game:</p>
+          <ul class="last-scores">
+            <li class="first-score"></li>
+            <li class="second-score"></li>
+            <li class="third-score"></li>
+          </ul>
+          <div class="button-box-end">
+              <a class="add-button upper-case " href="./index.html"
+                >koniec gry<i class="arrow right"></i
+              ></a>
+              <a class="add-button upper-case " href="./game.html"
+                >restart gry<i class="arrow right"></i
+              ></a>
+            </div>
+        </div>
+      </div>
+      <!-- </div> -->
+      <!-- <div class="text-about-truck-time"><p>Ciężarówka przewozi ładunek.</p></div> -->
+    <script src="./js/utils.js"></script>
+    <script src="./js/tetris.js"></script>
+    <script src="./js/bricks.js"></script>
+    <script src="./js/trucks.js"></script>
+  </body>
+</html>
